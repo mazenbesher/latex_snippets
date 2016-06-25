@@ -191,4 +191,26 @@ left aligned text
 	\item[Three] third item
 	\end{description}
 
+\section{Sample TikZ Diagram}
+\tikzset{>=stealth}
+\tikzset{every node/.style={distance=.3cm,draw,circle,fill=none}}
+\tikzset{label/.style={draw=none,rectangle,fill=none}}
+\begin{center}
+	\begin{tikzpicture}[->]
+	% Nodes
+	\node (a) at (0,0) {$a$};
+	\node (b) at (2,2) {$b$};
+	\node (c) at (2,0) {$c$};
+	\node (d) at (2,-2) {$d$};
+	\node (e) at (4,0) {$e$};
+	% Edges
+	\draw (a) to node [label,above] {$1$} (b);
+	\draw (a) to node [label,above] {$2$} (c);
+	\draw (a) to node [label,above] {$3$} (d);
+	\draw (d) to node [label,right] {$-3$} (c);
+	\draw (b) to node [label,above] {$1$} (e);
+	\draw (c) to node [label,above] {$1$} (e);
+	\end{tikzpicture}
+\end{center}
+
 \end{document}
