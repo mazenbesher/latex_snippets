@@ -22,6 +22,7 @@
 \usepackage{xifthen}
 \usepackage{enumitem}
 \usepackage{lipsum}
+\usepackage{multicol}
 
 %
 % Basic Document Settings
@@ -224,5 +225,27 @@ See more \href{http://texblog.org/2011/02/26/generating-dummy-textblindtext-with
 \end{verbatim}
 \lipsum[1] % 1 Paragraph
 %\lipsum[1-3] % Between 1 and 3 parahraphs
+
+
+\section{Force a column break in \texttt{multicols}}
+See \href{http://tex.stackexchange.com/questions/8683/how-do-i-force-a-column-break-in-a-multi-column-page}{Stakexchange}\\
+\begin{verbatim}
+\usepackage{multicol}
+
+\begin{multicols}{2}
+    \lipsum[1]	
+\vfill
+\columnbreak
+    \lipsum[1-2]
+\end{multicols}
+\end{verbatim}
+
+\begin{multicols}{2}
+	\lipsum[1]
+	\vfill
+	\columnbreak
+	\lipsum[1-2]
+\end{multicols}
+
 
 \end{document}
