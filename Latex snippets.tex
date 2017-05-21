@@ -23,6 +23,8 @@
 \usepackage{enumitem}
 \usepackage{lipsum}
 \usepackage{multicol}
+\usepackage{listings}
+\usepackage{my_commands}
 
 %
 % Basic Document Settings
@@ -398,5 +400,31 @@ See \href{http://tex.stackexchange.com/questions/8683/how-do-i-force-a-column-br
 
 \newpage
 
+\section{Make your own package}
+Write your own command such as \texttt{\textbackslash newcommand} or \texttt{\textbackslash newenvironment} in their own \texttt{.sty} file (example \texttt{my\_commands.sty}) and then use it in your document \texttt{\textbackslash usepackage\{my\_commands\}}.
+\\
+\\
+Example:
+\begin{framed}
+\begin{lstlisting}[language=TeX]
+\newcommand{\leftright}[2]{
+	\begin{flushleft}
+	#1
+		\begin{flushright}
+		#2
+		\end{flushright}
+	\end{flushleft}
+}
+\end{lstlisting}
+\end{framed}
+Result:
+\begin{framed}
+	\begin{lstlisting}[language=TeX]
+	\leftright{left}{right}
+	\end{lstlisting}
+\end{framed}
+\leftright{left}{right}
+
+ 
 
 \end{document}
