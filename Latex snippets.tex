@@ -26,6 +26,7 @@
 \usepackage{listings}
 \usepackage{my_commands}
 
+
 %
 % Basic Document Settings
 %
@@ -425,6 +426,42 @@ Result:
 \end{framed}
 \leftright{left}{right}
 
- 
+\section{Bibliography}
+Source \href{https://www.sharelatex.com/learn/Bibliography_management_in_LaTeX}{Bibliography management in LaTeX}
+
+\begin{verbatim}
+	\cite{latexcompanion}
+	
+	\bibliographystyle{unsrt}
+	\bibliography{sample}
+\end{verbatim}
+
+For computer science papers use \verb|\bibliographystyle{ieeetran}|
+
+This is an example of BibTeX using in bibliography management. Three items 
+are cited: \textit{The \LaTeX\ Companion} book \cite{latexcompanion}, the Einstein
+journal paper \cite{einstein}, and the Donald Knuth's website \cite{knuthwebsite}. 
+The \LaTeX\ related items are \cite{latexcompanion,knuthwebsite}. 
+
+\bibliographystyle{unsrt}
+\bibliography{sample}
+
+\subsection{Show all bib entries without cite command}
+Use: \verb|\nocite{*}|
+
+\section{Verbatim environment}
+\begin{itemize}
+\item Environment
+\begin{verbatim}
+	\begin{verbatim}
+	...
+\end{verbatim}
+
+\item Inline
+\begin{verbatim}
+	\verb|...|
+\end{verbatim}
+
+\end{itemize}
 
 \end{document}
