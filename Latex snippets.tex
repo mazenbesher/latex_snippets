@@ -469,4 +469,23 @@ Use: \verb|\nocite{*}|
 
 \end{itemize}
 
+\section{Create a pdf document exactly as big as the content}
+Use the \verb|standalone| package.\\
+Example:
+\begin{verbatim}
+\documentclass{standalone}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\begin{document}
+$
+a+b
+$
+\end{document}
+\end{verbatim}
+
+
 \end{document}
